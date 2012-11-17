@@ -1,0 +1,29 @@
+.shown-mobile,
+.shown-tablet,
+.shown-desktop,
+.hidden-mobile,
+.hidden-tablet,
+.hidden-desktop
+  display: none
+
+// For mobile
+@media all and (max-width: 499px)
+  .shown-mobile,
+  .hidden-tablet,
+  .hidden-desktop
+    display: inherit
+
+// For tablet
+@media all and (min-width: 500px) and (max-width: 781px)
+  .shown-tablet,
+  .hidden-mobile,
+  .hidden-desktop
+    display: inherit
+
+// For desktop
+@media all and (min-width: 781px)
+  .shown-desktop,
+  .hidden-mobile,
+  .hidden-tablet
+    display: inherit
+
