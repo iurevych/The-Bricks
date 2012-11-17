@@ -1,4 +1,4 @@
-@import 'config'
+@import 'mixins'
 
 .clearfix
   +clearfix
@@ -12,10 +12,6 @@
 
 .last-col
   +last-col
-
-.col1of1
-  float: none
-  width: 100%
 
 .col1of2
   width: 50%
@@ -66,11 +62,9 @@
   float: left
 
 .center
+  float: none !important
   margin-left: auto
   margin-right: auto
-
-.hidden
-  display: none
 
 .by-left
   text-align: left
@@ -81,8 +75,7 @@
 .by-center
   text-align: center
 
-@media all and (max-width: 499px)
-  .col1of2, .col1of3, .col1of4, .col1of5, .col1of6
-    float: none
-    width: auto
+.inline
+  vertical-align: middle
+  +inline-block
 

@@ -1,0 +1,20 @@
+@import '../config'
+
+body
+  background: #efefeb
+  color: $base-color
+  font: #{$base-font-size}/18px $base-font
+  height: 100%
+
+.App--container
+  margin: 0 auto
+  padding: 0 20px
+  width: 940px
+  +clearfix
+
+
+// MQ --------------------
+@media all and (max-width: 979px)
+  .App--container
+    width: 100%
+

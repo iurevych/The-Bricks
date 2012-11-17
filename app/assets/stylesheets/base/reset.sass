@@ -1,13 +1,45 @@
-@import 'config.sass'
+@import 'mixins'
 
-*
+body, html, *
   padding: 0
   margin: 0
+  font-size: 1em
   outline: none
 
 html
   -webkit-text-size-adjust: 100%
   -ms-text-size-adjust: 100%
+
+body
+  -webkit-font-smoothing: subpixel-antialiased
+
+a img, iframe, fieldset, object
+  border: none
+
+caption, th
+  text-align: left
+
+td
+  vertical-align: top
+
+sub, sup
+  vertical-align: baseline
+
+ul
+  list-style-type: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  background-color: white
+
+th, h1, h2, h3, h4, h5, h6
+  font-weight: normal
+
+cite, em
+  font-style: normal
 
 article,
 aside,
@@ -29,36 +61,10 @@ audio, canvas, video
 audio:not([controls])
   display: none
 
-img, iframe, fieldset, object, table
-  border: none
-
-caption, th
-  font-weight: normal
-  text-align: left
-
-td
-  vertical-align: top
-
-sub, sup
-  vertical-align: baseline
-
-ol, ul
-  list-style-type: none
-
-table
-  border-collapse: collapse
-  border-spacing: 0
-
-th, h1, h2, h3, h4, h5, h6
-  font-weight: normal
-
 button,
 input,
 select,
 textarea
-  margin: 0
-  font-family: $base-font
-  font-size: $base-font-size
   vertical-align: middle
 
 button, input
@@ -86,15 +92,4 @@ input[type="search"]
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button
   -webkit-appearance: none
-
-textarea
-  overflow: auto
-  vertical-align: top
-
-code
-  white-space: pre
-
-code,
-pre
-  font: #{$base-font-size}/1.231 $base-font
 

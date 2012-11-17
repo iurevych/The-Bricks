@@ -1,0 +1,12 @@
+!!!5
+%html
+  %head
+    %title The Bricks &mdash; User Interface Components Pack
+    %meta{charset: "utf-8"}
+    = stylesheet_link_tag "app"
+    = javascript_include_tag "application"
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+  %body
+    .App--container
+      = yield
+

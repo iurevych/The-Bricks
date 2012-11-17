@@ -34,7 +34,6 @@
   background-image:         linear-gradient(left, $start-color, $end-color)
 
 =inline-block
-  display: -moz-inline-stack
   display: inline-block
   zoom: 1
   _overflow: hidden
@@ -45,7 +44,7 @@
     color: $color
   &::-webkit-input-placeholder
     color: $color
-  &.placeholder
+  &.is-placeholder
     color: $color
 
 =transition($properties)
@@ -81,12 +80,12 @@
 // ==============================================
 =clearfix
   *zoom: 1
+  &:before,
   &:after
-    content: '.'
-    display: block
-    height: 0
+    display: table
+    content: ''
+  &:after
     clear: both
-    visibility: hidden
 
 =last-col
   display: table-cell
@@ -104,27 +103,4 @@
     height: 0 !important
     line-height: 0
     visibility: hidden
-
-// Scrollbar
-// ==============================================
-=scrollbar
-  &::-webkit-scrollbar
-    background: rgba(#fff, .05)
-    width: 8px
-    height: 8px
-  &::-webkit-scrollbar-corner,
-  &::-webkit-resizer
-    display: none
-  &::-webkit-scrollbar-track-piece:disabled
-    display: none !important
-  &::-webkit-scrollbar:vertical
-    border: none
-  &::-webkit-scrollbar-thumb:vertical,
-  &::-webkit-scrollbar-thumb:horizontal
-    background: rgba(#fff, .15)
-    border: none
-    min-height: 20px
-  &::-webkit-scrollbar-thumb:vertical:hover,
-  &::-webkit-scrollbar-thumb:horizontal:hover
-    background: $positive
 
