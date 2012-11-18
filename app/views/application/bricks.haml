@@ -32,7 +32,43 @@
   .button.is-corner.mrs Corner
 
 .pvl
-  %h1.mbl Text inputs and flexible grids
+  %h1.mbl Text inputs
+  .form--row.mbl
+    %input{type: "text", value: "Default"}
+
+  .form--row.mbl
+    %input.is-negative{type: "text", value: "Negative"}
+
+  .form--row.mbl
+    %input.is-positive{type: "text", value: "Positive"}
+
+  .form--row.mbl
+    %input.is-notice{type: "text", value: "Notice"}
+
+.pvl
+  %h1.mbl Text inputs: Shapes
+  .form--row.mbl
+    %input{type: "text", value: "Default"}
+
+  .form--row.mbl
+    %input.is-square{type: "text", value: "Square"}
+
+  .form--row.mbl
+    %input.is-rounded{type: "text", value: "Rounded"}
+
+.pvl
+  %h1.mbl Text inputs: Effects
+  .form--row.mbm
+    %input{type: "text", value: "Default"}
+
+  .form--row.mbm
+    %input.is-minimal{type: "text", value: "Minimal"}
+
+  .form--row.mbm
+    %input.is-inverse{type: "text", value: "Inverse"}
+
+.pvl
+  %h1.mbl Flexible grids
   .form--row.mbm
     %input{type: "text", value: "100%"}
 

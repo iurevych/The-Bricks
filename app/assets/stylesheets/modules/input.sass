@@ -10,17 +10,76 @@ input[type='email'],
 input[type='search']
   background-color: #fff
   border: 1px solid rgba(#000, .12)
-  border-top-color: rgba(#000, .23)
+  border-top-color: rgba(#000, .1)
   border-radius: 5px
+  color: #404040
   float: none
   font: 500 15px/normal $base-font
-  height: 39px
-  line-height: 20px
+  height: 38px
+  line-height: 19px
   margin: 0 -4px 0 0
-  padding: 6px 13px 9px
+  padding: 9px 13px
   vertical-align: middle
   width: 100%
   +box-sizing
-  +box-shadow(inset 0 1px 1px rgba(#000, .13))
+  +box-shadow(0 -1px 0 rgba(#000, .17))
   +inline-block
+  +transition(.1s)
+
+  &:hover,
+  &:focus
+    border-color: #c6dfed
+    +box-shadow(0 0 0 2px rgba(#89c7ef, .4))
+
+  &:focus
+    background-color: #f3f8fc
+
+
+  // ------------------------
+  // Colors
+  // ------------------------
+  &.is-negative
+    background-color: #f7f0f2
+    border-color: #efcac8
+    +box-shadow(0 0 0 2px rgba(#ee9393, .4))
+
+  &.is-positive
+    background-color: #f1f7f0
+    border-color: #bcd8bd
+    +box-shadow(0 0 0 2px rgba(#6fb679, .4))
+
+  &.is-notice
+    background-color: #fafaf6
+    border-color: #dfe1ca
+    +box-shadow(0 0 0 2px rgba(#c6cb99, .4))
+
+
+  // ------------------------
+  // Effects
+  // ------------------------
+  &.is-minimal
+    +box-shadow(none)
+
+  &.is-inverse
+    background-color: #a7a7a4
+    color: #fff
+    text-shadow: 0 1px 0 rgba(#000, .5)
+    +box-shadow(0 -1px 0 rgba(#000, .5))
+    &:hover,
+    &:focus
+      border-color: #ccc
+      +box-shadow(0 0 0 2px rgba(#999, .4))
+    &:focus
+      background-color: #999
+
+
+  // ------------------------
+  // Shapes
+  // ------------------------
+  &.is-square
+    border-radius: 0
+
+  &.is-rounded
+    border-radius: 90px
+
 
