@@ -18,7 +18,7 @@ input[type='search']
   height: 38px
   line-height: 19px
   margin: 0 -4px 0 0
-  padding: 9px 13px
+  padding: 9px 35px 9px 13px
   vertical-align: middle
   width: 100%
   +box-sizing
@@ -82,4 +82,64 @@ input[type='search']
   &.is-rounded
     border-radius: 90px
 
+
+// ---------------------------
+// Use holder to place icon
+// inside text field
+// ---------------------------
+.input--holder
+  position: relative
+
+
+// ---------------------------
+// Input icon is placed inside
+// text field
+// ---------------------------
+.input--icon,
+.input--button
+  background-color: transparent
+  background-position: center center
+  background-repeat: no-repeat
+  border: none
+  border-radius: 3px
+  cursor: pointer
+  height: 30px
+  position: absolute
+  right: 4px
+  top: 4px
+  width: 30px
+  z-index: 2
+
+  // Shape
+  &.is-rounded
+    border-radius: 3px 50% 50% 3px
+
+  // Icons
+  &.is-search
+    background-image: image-url('input/icon-search.png')
+
+  &.is-date
+    background-image: image-url('input/icon-date.png')
+
+  &.is-error
+    background-image: image-url('input/icon-error.png')
+
+  &.is-success
+    background-image: image-url('input/icon-success.png')
+
+
+// Input button specific styles
+.input--button
+  background-color: #bfbfbf
+  +box-shadow(inset 0 -15px 30px -10px rgba(#000, .2))
+
+  &:hover,
+  &:focus
+    +box-shadow(0 1px 1px rgba(#000, .4))
+
+  &:active
+    +box-shadow(inset 0 2px 8px rgba(#000, .4))
+
+  &.is-firm
+    background-color: #3a84c2
 
