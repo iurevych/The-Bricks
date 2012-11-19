@@ -59,36 +59,37 @@
         %input{type: "text", value: "Default"}
         %input.input--icon.is-success{type: "submit", value: ""}
 
-  .form--row.mbl
-    %input.is-negative{type: "text", value: "Negative"}
+  .form--row.is-l-gap
+    .col1of3
+      .mll
+        %input.is-negative{type: "text", value: "Negative"}
+    .col1of3
+      .mll
+        %input.is-positive{type: "text", value: "Positive"}
+    .col1of3
+      .mll
+        %input.is-notice{type: "text", value: "Notice"}
 
-  .form--row.mbl
-    %input.is-positive{type: "text", value: "Positive"}
+.ptl.clearfix
+  .col1of2
+    .mrm
+      %h1.mbl Shapes
+      .form--row.mbl
+        %input{type: "text", value: "Default"}
+      .form--row.mbl
+        %input.is-square{type: "text", value: "Square"}
+      .form--row.mbl
+        %input.is-rounded{type: "text", value: "Rounded"}
 
-  .form--row.mbl
-    %input.is-notice{type: "text", value: "Notice"}
-
-.pvl
-  %h1.mbl Text inputs: Shapes
-  .form--row.mbl
-    %input{type: "text", value: "Default"}
-
-  .form--row.mbl
-    %input.is-square{type: "text", value: "Square"}
-
-  .form--row.mbl
-    %input.is-rounded{type: "text", value: "Rounded"}
-
-.pvl
-  %h1.mbl Text inputs: Effects
-  .form--row.mbm
-    %input{type: "text", value: "Default"}
-
-  .form--row.mbm
-    %input.is-minimal{type: "text", value: "Minimal"}
-
-  .form--row.mbm
-    %input.is-inverse{type: "text", value: "Inverse"}
+  .col1of2
+    .mlm
+      %h1.mbl Effects
+      .form--row.mbl
+        %input{type: "text", value: "Default"}
+      .form--row.mbl
+        %input.is-minimal{type: "text", value: "Minimal"}
+      .form--row.mbl
+        %input.is-inverse{type: "text", value: "Inverse"}
 
 .pvl
   %h1.mbl Flexible grids
