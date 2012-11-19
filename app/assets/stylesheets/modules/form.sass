@@ -8,18 +8,13 @@
   +clearfix
 
 
-  // ----------------------
-  // Fixes left margin of the form row
-  // ----------------------
-  &.is-l-gap
-    margin-left: -#{$space-l}
-
-  &.is-m-gap
-    margin-left: -#{$space-m}
-
-  &.is-s-gap
-    margin-left: -#{$space-s}
-
-  &.is-x-gap
-    margin-left: -#{$space-x}
+// MQ --------------------
+@media all and (max-width: 979px)
+  .form--row
+    .input,
+    input[type='text'],
+    input[type='password'],
+    input[type='email'],
+    input[type='search']
+      margin-bottom: $space-m
 

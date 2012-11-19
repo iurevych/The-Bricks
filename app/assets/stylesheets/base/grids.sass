@@ -1,6 +1,7 @@
-@import 'mixins'
+@import '../config'
 
-.clearfix
+.row,
+.form--row
   +clearfix
 
 .col1of2,
@@ -9,6 +10,7 @@
 .col1of5, .col2of5, .col3of5, .col4of5,
 .col1of6, .col2of6, .col3of6, .col4of6, .col5of6
   float: left
+  +box-sizing
 
 .last-col
   +last-col

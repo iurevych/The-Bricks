@@ -125,3 +125,43 @@
 .mll, .mhl, .mal
   margin-left: $space-l
 
+
+// ----------------------
+// Negative left margin of the row
+// ----------------------
+.-mll
+  margin-left: -#{$space-l}
+
+.-mlm
+  margin-left: -#{$space-m}
+
+.-mls
+  margin-left: -#{$space-s}
+
+.-mlx
+  margin-left: -#{$space-x}
+
+// Add spaces to each closest column
+// inside particular row.
+.row,
+.form--row
+  &.is-x
+    margin-left: -$space-x
+    > [class^='col']
+      padding-left: $space-x
+
+  &.is-s
+    margin-left: -$space-s
+    > [class^='col']
+      padding-left: $space-x
+
+  &.is-m
+    margin-left: -$space-m
+    > [class^='col']
+      padding-left: $space-m
+
+  &.is-l
+    margin-left: -$space-l
+    > [class^='col']
+      padding-left: $space-l
+

@@ -1,4 +1,4 @@
-.pvl.mtl
+.App--block
   %h1 One class fits multiple tags
   .button.mrs Div
   %span.button.mrs Span
@@ -6,12 +6,12 @@
   %input.button.mrs{type: "submit", value: "Input"}
   %button.button Button
 
-.pvl
+.App--block
   %h1 Size
   .button.mrs Default
   .button.is-small.mrs Small
 
-.pvl
+.App--block
   %h1 Colors
   .button.mrs Default
   .button.is-firm.mrs Firm
@@ -19,154 +19,130 @@
   .button.is-negative.mrs Negative
   .button.is-inverse.mrs Inverse
 
-.pvl
+.App--block
   %h1 Effects
   .button.mrs Default
   .button.is-minimal.mrs Minimal
   .button.is-stroke.mrs Stroke
 
-.pvl
+.App--block
   %h1 Shapes
   .button.mrs Default
   .button.is-square.mrs Square
   .button.is-corner.mrs Corner
 
-.pvl
+.App--block
   %h1 Text inputs
-  .form--row.mbl.is-m-gap
+  .form--row.is-m.mbl
     .col1of6
-      .input--holder.mlm
+      .input--holder
         %input{type: "text", value: "Default"}
         %input.input--button.is-search{type: "submit", value: ""}
     .col1of6
-      .input--holder.mlm
+      .input--holder
         %input{type: "text", value: "Default"}
         %input.input--button.is-firm.is-search{type: "submit", value: ""}
     .col1of6
-      .input--holder.mlm
+      .input--holder
         %input.is-rounded{type: "text", value: "Rounded"}
         %input.input--button.is-rounded.is-search{type: "submit", value: ""}
     .col1of6
-      .input--holder.mlm
+      .input--holder
         %input{type: "text", value: "Default"}
         %input.input--icon.is-date{type: "submit", value: ""}
     .col1of6
-      .input--holder.mlm
+      .input--holder
         %input{type: "text", value: "Default"}
         %input.input--icon.is-error{type: "submit", value: ""}
     .col1of6
-      .input--holder.mlm
+      .input--holder
         %input{type: "text", value: "Default"}
         %input.input--icon.is-success{type: "submit", value: ""}
 
-  .form--row.is-l-gap
+  .form--row.is-l
     .col1of3
-      .mll
-        %input.is-negative{type: "text", value: "Negative"}
+      %input.is-negative{type: "text", value: "Negative"}
     .col1of3
-      .mll
-        %input.is-positive{type: "text", value: "Positive"}
+      %input.is-positive{type: "text", value: "Positive"}
     .col1of3
-      .mll
-        %input.is-notice{type: "text", value: "Notice"}
+      %input.is-notice{type: "text", value: "Notice"}
 
-.ptl.clearfix
-  .col1of2
-    .mrm
+.App--block
+  .row.is-m
+    .col1of2
       %h1 Shapes
-      .form--row.mbl
+      .form--row
         %input{type: "text", value: "Default"}
-      .form--row.mbl
+      .form--row
         %input.is-square{type: "text", value: "Square"}
-      .form--row.mbl
+      .form--row
         %input.is-rounded{type: "text", value: "Rounded"}
 
-  .col1of2
-    .mlm
+    .col1of2
       %h1 Effects
-      .form--row.mbl
+      .form--row
         %input{type: "text", value: "Default"}
-      .form--row.mbl
+      .form--row
         %input.is-minimal{type: "text", value: "Minimal"}
-      .form--row.mbl
+      .form--row
         %input.is-inverse{type: "text", value: "Inverse"}
 
-.pvl.mbl
+.App--block
   %h1 Flexible grids
   .form--row
     %input{type: "text", value: "100%"}
 
-  .form--row.is-m-gap
+  .form--row.is-m
     .col1of2
-      .mlm
-        %input{type: "text", value: "1/2"}
+      %input{type: "text", value: "1/2"}
     .col1of2
-      .mlm
-        %input{type: "text", value: "1/2"}
+      %input{type: "text", value: "1/2"}
 
-  .form--row.is-m-gap
+  .form--row.is-m
     .col1of3
-      .mlm
-        %input{type: "text", value: "1/3"}
+      %input{type: "text", value: "1/3"}
     .col1of3
-      .mlm
-        %input{type: "text", value: "1/3"}
+      %input{type: "text", value: "1/3"}
     .col1of3.right
-      .mlm
-        %input{type: "text", value: "1/3"}
+      %input{type: "text", value: "1/3"}
 
-  .form--row.is-m-gap
+  .form--row.is-m
     .col1of4
-      .mlm
-        %input{type: "text", value: "1/4"}
+      %input{type: "text", value: "1/4"}
     .col1of4
-      .mlm
-        %input{type: "text", value: "1/4"}
+      %input{type: "text", value: "1/4"}
     .col1of4
-      .mlm
-        %input{type: "text", value: "1/4"}
+      %input{type: "text", value: "1/4"}
     .col1of4
-      .mlm
-        %input{type: "text", value: "1/4"}
+      %input{type: "text", value: "1/4"}
 
-  .form--row.is-m-gap
+  .form--row.is-m
     .col1of5
-      .mlm
-        %input{type: "text", value: "1/5"}
+      %input{type: "text", value: "1/5"}
     .col1of5
-      .mlm
-        %input{type: "text", value: "1/5"}
+      %input{type: "text", value: "1/5"}
     .col1of5
-      .mlm
-        %input{type: "text", value: "1/5"}
+      %input{type: "text", value: "1/5"}
     .col1of5
-      .mlm
-        %input{type: "text", value: "1/5"}
+      %input{type: "text", value: "1/5"}
     .col1of5
-      .mlm
-        %input{type: "text", value: "1/5"}
+      %input{type: "text", value: "1/5"}
 
-  .form--row.is-m-gap
+  .form--row.is-m
     .col1of6
-      .mlm
-        %input{type: "text", value: "1/6"}
+      %input{type: "text", value: "1/6"}
     .col1of6
-      .mlm
-        %input{type: "text", value: "1/6"}
+      %input{type: "text", value: "1/6"}
     .col1of6
-      .mlm
-        %input{type: "text", value: "1/6"}
+      %input{type: "text", value: "1/6"}
     .col1of6
-      .mlm
-        %input{type: "text", value: "1/6"}
+      %input{type: "text", value: "1/6"}
     .col1of6
-      .mlm
-        %input{type: "text", value: "1/6"}
+      %input{type: "text", value: "1/6"}
     .col1of6.right
-      .mlm
-        %input{type: "text", value: "1/6"}
+      %input{type: "text", value: "1/6"}
 
-.mbl.pbl
+.App--block
   %h1 Labels
   %span.label Default
   %a.label.is-firm{href: "#"} Firm
@@ -176,7 +152,7 @@
   %a.label.is-notice{href: "#"} Notice
   %a.label.is-pale{href: "#"} Pale
 
-.mbl.pbl
+.App--block
   %h1 Badges
   %span.badge Default
   %a.badge.is-firm{href: "#"} Firm
@@ -185,4 +161,27 @@
   %a.badge.is-inverse{href: "#"} Inverse
   %a.badge.is-notice{href: "#"} Notice
   %a.badge.is-pale{href: "#"} Pale
+
+.App--block
+  %h1 Bubbles
+  .row.is-l
+    .col1of2
+      .bubble
+        %h3.bubble--title Everything is Ok!
+        %p
+          The Nashville Sounds are a minor league baseball team of the Pacific Coast League
+          and the Triple-A affiliate of the Milwaukee Brewers.
+        .bubble--actions
+          %a.button.is-firm{href: "#"} Subscribe
+          %a.button{href: "#"} Cancel
+
+    .col1of2
+      .bubble
+        %h3.bubble--title Everything is Ok!
+        %p
+          The Nashville Sounds are a minor league baseball team of the Pacific Coast League
+          and the Triple-A affiliate of the Milwaukee Brewers.
+        .bubble--actions
+          %a.button.is-firm{href: "#"} Subscribe
+          %a.button{href: "#"} Cancel
 
