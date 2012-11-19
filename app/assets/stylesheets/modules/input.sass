@@ -95,8 +95,7 @@ input[type='search']
 // Input icon is placed inside
 // text field
 // ---------------------------
-.input--icon,
-.input--button
+.input--icon
   background-color: transparent
   background-position: center center
   background-repeat: no-repeat
@@ -107,7 +106,7 @@ input[type='search']
   position: absolute
   right: 4px
   top: 4px
-  width: 30px
+  min-width: 30px
   z-index: 2
 
   // Shape
@@ -130,7 +129,11 @@ input[type='search']
 
 // Input button specific styles
 .input--button
+  @extend .input--icon
   background-color: #bfbfbf
+  color: $inverse
+  font: 500 13px/19px $base-font
+  text-transform: uppercase
   +box-shadow(inset 0 -15px 30px -10px rgba(#000, .2))
 
   &:hover,

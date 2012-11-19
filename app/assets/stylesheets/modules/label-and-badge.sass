@@ -4,7 +4,7 @@
 @import '../config'
 
 .label
-  background-color: #c0c0c0
+  background-color: $pale
   border-radius: 2px
   color: $inverse
   display: inline-block
@@ -14,7 +14,6 @@
   padding: 2px 6px 1px
   text-decoration: none
   text-shadow: 0 1px 1px rgba(#000, .2)
-  text-transform: uppercase
   vertical-align: middle
 
   &:hover
@@ -35,12 +34,16 @@
 
   &.is-notice
     background-color: $bright
+    color: $base-color
+    text-shadow: 0 1px 0 rgba(#fff, .3)
 
   &.is-inverse
     background-color: $base-color
 
   &.is-pale
-    background-color: $pale
+    background-color: #c0c0c0
+    color: $base-color
+    text-shadow: 0 1px 0 rgba(#fff, .3)
 
 
 a.label
@@ -57,7 +60,7 @@ a.label
 // ------------------
 .badge
   @extend .label
-  background-image: image-url('badge/bg-default.png')
+  background-image: image-url('badge/bg-pale.png')
   background-repeat: repeat-x
   background-position: left bottom
   border-radius: 0 2px 2px 0
@@ -67,7 +70,7 @@ a.label
 
   // Ear
   &::before
-    background-image: image-url('badge/ear.png')
+    background-image: image-url('badge/ear-pale.png')
     background-repeat: no-repeat
     content: ''
     height: 100%
@@ -103,9 +106,9 @@ a.label
       background-image: image-url('badge/ear-inverse.png')
 
   &.is-pale
-    background-image: image-url('badge/bg-pale.png')
+    background-image: image-url('badge/bg-default.png')
     &::before
-      background-image: image-url('badge/ear-pale.png')
+      background-image: image-url('badge/ear.png')
 
 a.badge
   &:hover,
