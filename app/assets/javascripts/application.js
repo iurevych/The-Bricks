@@ -12,4 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require init
+//= require_tree ./vendor
 //= require_tree .

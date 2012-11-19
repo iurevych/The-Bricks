@@ -15,6 +15,10 @@
   -moz-box-sizing:    border-box
   box-sizing:         border-box
 
+=opacity($value)
+  opacity: $value
+  filter: alpha(opacity=$value*100)
+
 =vertical-gradient($start-color, $end-color)
   background: $end-color
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $start-color), color-stop(100%, $end-color))

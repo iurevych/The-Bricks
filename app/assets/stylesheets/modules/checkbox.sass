@@ -1,0 +1,29 @@
+// ------------------
+// Checkbox
+// ------------------
+@import '../config'
+
+.checkbox
+  background: image-url('checkbox/firm.png') -80px -30px no-repeat
+  cursor: pointer
+  font: 500 15px/18px $base-font
+  display: inline-block
+  margin-right: $space-l
+  padding-left: 25px
+  position: relative
+  vertical-align: middle
+
+  // States
+  &.is-checked
+    background-position: -120px 0
+    &.is-disabled
+      background-position: -40px -60px
+
+  &.is-disabled
+    background-position: 0 -90px
+    color: $bare
+    cursor: default
+
+  input[type='checkbox']
+    display: none
+

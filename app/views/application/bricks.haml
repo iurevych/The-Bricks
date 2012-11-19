@@ -143,6 +143,24 @@
       %input{type: "text", value: "1/6"}
 
 .App--block
+  %h1 Checkboxes
+  %span.checkbox
+    %input.checkbox--input{type: "checkbox"}
+    Unchecked
+
+  %span.checkbox
+    %input.checkbox--input{type: "checkbox", checked: "checked"}
+    Checked
+
+  %span.checkbox
+    %input.checkbox--input{type: "checkbox", disabled: "disabled"}
+    Unchecked
+
+  %span.checkbox
+    %input.checkbox--input{type: "checkbox", checked: "checked", disabled: "disabled"}
+    Checked
+
+.App--block
   %h1 Labels
   %span.label Default
   %a.label.is-firm{href: "#"} Firm
