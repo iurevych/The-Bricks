@@ -1,0 +1,86 @@
+// -----------------
+// Bubble block
+// -----------------
+@import '../config'
+
+.bubble
+  background-color: #fff
+  border: 1px solid rgba(#000, .15)
+  border-radius: 10px
+  font-size: 15px
+  margin-bottom: 20px
+  padding: 26px
+  padding-bottom: 11px
+  position: relative
+
+  // ----------------
+  // Colors
+  // ----------------
+  &.is-firm
+    background-color: #f3f8fc
+    border: 3px solid rgba(#89c7ef, .4)
+    .bubble--title,
+    .bubble--close
+      color: $firm
+    .bubble--close
+      &:hover
+        color: lighten($firm, 15%)
+
+  &.is-positive
+    background-color: #f1f7f0
+    border: 3px solid rgba(#6fb679, .4)
+    .bubble--title,
+    .bubble--close
+      color: $positive
+    .bubble--close
+      &:hover
+        color: lighten($positive, 15%)
+
+  &.is-negative
+    background-color: #f7f0f2
+    border: 3px solid rgba(#ee9393, .4)
+    .bubble--title,
+    .bubble--close
+      color: $negative
+    .bubble--close
+      &:hover
+        color: lighten($negative, 15%)
+
+  &.is-notice
+    background-color: #fafaf6
+    border: 3px solid rgba(#c6cb99, .4)
+    .bubble--title,
+    .bubble--close
+      color: $notice
+    .bubble--close
+      &:hover
+        color: lighten($notice, 15%)
+
+  // ----------------
+  // Bubble content styling
+  // ----------------
+  p
+    margin-bottom: 15px
+
+.bubble--title
+  margin-bottom: 15px
+
+.bubble--actions
+  padding-bottom: 15px
+  .button
+    margin-right: $space-m
+
+.bubble--close
+  background: image-url('bubble/close.png') left bottom no-repeat
+  color: $base-color
+  cursor: pointer
+  font-size: 21px
+  height: 25px
+  line-height: 32px
+  position: absolute
+  right: 0
+  top: 0
+  width: 26px
+  &:hover
+    color: lighten($base-color, 25%)
+
