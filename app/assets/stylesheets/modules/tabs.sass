@@ -1,0 +1,72 @@
+// --------------------------
+// Horizontal tabs navigation
+// --------------------------
+@import '../config'
+
+.tabs
+  background-color: rgba(#c0c0c0, .4)
+  border-radius: 5px 5px 0 0
+  padding: 6px 6px 0
+  +box-shadow(inset 0 -30px 30px -20px rgba(#000, .05))
+  +clearfix
+
+  // Colors
+  &.is-inverse
+    background-color: #606060
+    +box-shadow(inset 0 -30px 30px -20px rgba(#000, .15))
+
+  &.is-minimal
+    background-color: #fff
+    +box-shadow((0 1px 1px rgba(#000, .1), inset 0 -30px 30px -20px rgba(#000, .05)))
+
+    .tabs--link.is-active
+      +box-shadow(0 2px 0 #efefeb)
+
+  &.is-firm
+    background-color: $firm
+    +box-shadow(inset 0 -30px 30px -20px rgba(#000, .15))
+
+  &.is-positive
+    background-color: $positive
+    +box-shadow(inset 0 -30px 30px -20px rgba(#000, .1))
+
+  &.is-negative
+    background-color: $negative
+    +box-shadow(inset 0 -30px 30px -20px rgba(#000, .1))
+
+  > li
+    float: left
+
+
+.tabs--link
+  border-radius: 3px 3px 0 0
+  color: #372f2b
+  display: block
+  font-size: 15px
+  font-weight: bold
+  padding: 11px 17px 17px
+  position: relative
+  text-shadow: 1px 1px 1px rgba(#fff, .25)
+
+  &:hover
+    color: #372f2b
+
+  &.is-active
+    background: #efefeb
+
+    &::after
+      display: none
+
+  // Tabs delimiter
+  &::after
+    background: image-url('tabs/delimiter.png') left bottom no-repeat
+    bottom: 0
+    content: ''
+    height: 100%
+    position: absolute
+    right: -1px
+    width: 2px
+
+  .tabs > li:last-child &::after
+    display: none
+
