@@ -146,7 +146,8 @@
 .row,
 .form--row
   > .col1of3
-    float: right
+    &:nth-child(3n)
+      float: right
 
   &.is-x
     margin-left: -$space-x
