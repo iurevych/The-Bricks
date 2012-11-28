@@ -2,8 +2,13 @@
 // Buttons of any size and color
 // -------------------------------
 @import '../config'
+$shadow-edge:         inset 0 -2px 0 rgba(#000, .18)
+$shadow-blur:         inset 0 -25px 40px -20px rgba(#000, .4)
+$shadow-active-light: inset 0 -25px 40px -20px rgba(#fff, .3)
+$shadow-active-dark:  inset 0 1px 8px rgba(#000, .5)
 
 .button
+  background-color: #adadad
   border: none
   border-radius: 90px
   color: #fff
@@ -14,16 +19,17 @@
   text-decoration: none
   text-shadow: 0 -1px 1px rgba(#000, .55)
   vertical-align: middle
-  +box-shadow(inset 0 -2px 0 rgba(#000, .18))
-  +vertical-gradient(#adadad, #7a7a7a)
+  +box-shadow(($shadow-edge, $shadow-blur))
+  +transition(.1s)
+  +user-select(none)
 
   &:hover, &:focus
+    background-color: #bdbdbd
     color: #fff
-    +vertical-gradient(#bdbdbd, #929292)
 
   &:active
-    +box-shadow((inset 0 1px 8px rgba(#000, .5), 0 2px 0 rgba(#fff, .6)))
-    +vertical-gradient(#797979, #acacac)
+    background-color: #797979
+    +box-shadow(($shadow-active-dark, 0 2px 0 rgba(#fff, .6), $shadow-active-light))
 
 
   // ---------------------------
@@ -38,32 +44,32 @@
   // Colors
   // ---------------------------
   &.is-firm
-    +vertical-gradient(#3b85c3, #295e8a)
+    background-color: #3b85c3
     &:hover, &:focus
-      +vertical-gradient(#479dcf, #3171a1)
+      background-color: #479dcf
     &:active
-      +vertical-gradient(#295e89, #3b85c3)
+      background-color: #295e89
 
   &.is-positive
-    +vertical-gradient(#7aaa72, #567851)
+    background-color: #7aaa72
     &:hover, &:focus
-      +vertical-gradient(#94bc8a, #679061)
+      background-color: #94bc8a
     &:active
-      +vertical-gradient(#567750, #7aaa72)
+      background-color: #567750
 
   &.is-negative
-    +vertical-gradient(#d72e2e, #972020)
+    background-color: #d72e2e
     &:hover, &:focus
-      +vertical-gradient(#df3737, #ac2626)
+      background-color: #df3737
     &:active
-      +vertical-gradient(#962020, #d62e2e)
+      background-color: #962020
 
   &.is-inverse
-    +vertical-gradient(#372f2b, #27211e)
+    background-color: #372f2b
     &:hover, &:focus
-      +vertical-gradient(#423834, #2f2824)
+      background-color: #423834
     &:active
-      +vertical-gradient(#27211e, #372f2b)
+      background-color: #27211e
 
 
   // ---------------------------
@@ -71,12 +77,14 @@
   // ---------------------------
   &.is-minimal
     text-shadow: none
-    +box-shadow(none)
+    +box-shadow($shadow-blur)
+    &:active
+      +box-shadow(($shadow-active-dark, $shadow-active-light))
 
   &.is-stroke
-    +box-shadow((inset 0 2px 0 rgba(#fff, .4), inset 0 1px 0 rgba(#000, .4), inset 0 0 0 1px rgba(#000, .2)))
+    +box-shadow((inset 0 2px 0 rgba(#fff, .4), inset 0 1px 0 rgba(#000, .4), inset 0 0 0 1px rgba(#000, .2), $shadow-blur))
     &:active
-      +box-shadow((inset 0 1px 3px rgba(#000, .25), 0 2px 0 rgba(#fff, .6)))
+      +box-shadow(($shadow-active-dark, 0 2px 0 rgba(#fff, .6), $shadow-active-light))
 
 
   // ---------------------------
