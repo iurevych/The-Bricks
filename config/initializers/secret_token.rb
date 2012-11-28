@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-TheBricks::Application.config.secret_token = '6b6926549ec5bca3180a4d3abca53f5a6a6006390e2f5f2260e49bcffb86fccb667bf596a978b702cd274c1f9e724dfbdc4dbdebb9d042d50a32ccf4b3945ef7'
+TheBricks::Application.config.secret_token = 'e3e028275247e0ea4cfffa6eaba9e69ae36a764cf83a1ca27aeabaf93ed4a43b3a4838c0618086195f5aade4aba848d8885b05261ab263fd6c490bfb8b623991'
