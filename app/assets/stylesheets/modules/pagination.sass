@@ -1,0 +1,61 @@
+// --------------------------
+// Pagination of all kinds
+// --------------------------
+@import '../config'
+
+.pagination
+  cursor: default
+  font-size: 15px
+  font-weight: 500
+  +clearfix
+
+  // -----------------------
+  // Default text pagination
+  // -----------------------
+  > li
+    float: left
+
+    &.is-first
+      a
+        padding-left: 0
+
+    &.is-last
+      a
+        padding-right: 0
+
+    &.is-prev
+      a
+        background: image-url('pagination/previous.png') 0 13px no-repeat
+        margin-left: 10px
+        padding-left: 24px
+
+    &.is-next
+      a
+        background: image-url('pagination/next.png') right 13px no-repeat
+        margin-right: 10px
+        padding-right: 24px
+
+    &.is-inactive
+      &.is-prev a
+        background-position: 0 -59px
+
+      &.is-next a
+        background-position: right -59px
+
+      a, a:hover
+        color: #c0c0c0
+        cursor: default
+        text-decoration: none
+        +opacity(1)
+
+    &.is-caption
+      padding: 7px 20px
+
+    a
+      display: block
+      padding: 7px 10px
+      text-decoration: underline
+      &:hover
+        color: $link
+        +opacity(.75)
+
