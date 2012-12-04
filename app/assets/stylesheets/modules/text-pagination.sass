@@ -1,17 +1,14 @@
 // --------------------------
-// Pagination of all kinds
+// Text pagination
 // --------------------------
 @import '../config'
 
-.pagination
+.text-pagination
   cursor: default
   font-size: 15px
   font-weight: 500
   +clearfix
 
-  // -----------------------
-  // Default text pagination
-  // -----------------------
   > li
     float: left
 
@@ -25,13 +22,13 @@
 
     &.is-prev
       a
-        background: image-url('pagination/previous.png') 0 13px no-repeat
+        background: image-url('text-pagination/previous.png') 0 13px no-repeat
         margin-left: 10px
         padding-left: 24px
 
     &.is-next
       a
-        background: image-url('pagination/next.png') right 13px no-repeat
+        background: image-url('text-pagination/next.png') right 13px no-repeat
         margin-right: 10px
         padding-right: 24px
 

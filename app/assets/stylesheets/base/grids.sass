@@ -1,5 +1,10 @@
 @import '../config'
 
+$one-third: percentage(1/3)
+$two-third: percentage(2/3)
+$one-sixth: percentage(1/6)
+$five-sixth: percentage(5/6)
+
 .row,
 .form--row
   +clearfix
@@ -15,14 +20,17 @@
 .last-col
   +last-col
 
-.col1of2
+.col1of2,
+.col3of6
   width: 50%
 
-.col1of3
-  width: 33.33333%
+.col1of3,
+.col2of6
+  width: $one-third
 
-.col2of3
-  width: 66.66666%
+.col2of3,
+.col4of6
+  width: $two-third
 
 .col1of4
   width: 25%
@@ -43,19 +51,10 @@
   width: 80%
 
 .col1of6
-  width: 16.66666%
-
-.col2of6
-  width: 33.33333%
-
-.col3of6
-  width: 50%
-
-.col4of6
-  width: 66.66666%
+  width: $one-sixth
 
 .col5of6
-  width: 83.33333%
+  width: $five-sixth
 
 .right
   float: right
