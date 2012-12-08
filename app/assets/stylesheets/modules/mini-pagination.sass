@@ -1,0 +1,89 @@
+// --------------------------
+// Mini pagination with Prev/Next buttons as arrows
+// --------------------------
+@import '../config'
+
+// Gradient background
+=_gradient
+  background-color: #3b85c8
+  border-color: #2c69a1
+  color: #fff
+  text-shadow: 1px 1px rgba(#000, .55)
+  +box-shadow((inset 0 1px rgba(#fff, .3), inset 0 -20px 20px -10px #286398))
+  &:hover
+    color: #fff
+
+.mini-pagination
+  cursor: default
+  font-size: 15px
+  font-weight: 500
+  margin-bottom: $space-l
+
+  > li
+    display: inline-block
+    position: relative
+
+    // Different states
+    &.is-prev,
+    &.is-next
+      a
+        padding-left: 8px
+        padding-right: 8px
+        +_gradient
+        &:before
+          content: ''
+          height: 21px
+          left: -7px
+          position: absolute
+          top: 0
+          width: 9px
+
+    &.is-prev
+      margin-left: 7px
+      a
+        border-left-color: transparent !important
+        &:before
+          background: image-url('mini-pagination/prev-arrow.png') 0 0 no-repeat
+
+    &.is-next
+      margin-right: 7px
+      a
+        border-right-color: transparent !important
+        &:before
+          background-image: image-url('mini-pagination/next-arrow.png')
+          left: auto
+          right: -7px
+
+    &.is-active a
+      +_gradient
+
+    &.is-inactive
+      &.is-prev,
+      &.is-next
+        a
+          background-color: transparent
+          border-color: #ccc
+          text-shadow: none
+          +box-shadow(none)
+          &:before
+            background-position: 0 -40px
+
+      a, a:hover
+        color: #c0c0c0
+        cursor: default
+        text-decoration: none
+        +opacity(1)
+
+    // Default link style
+    a
+      border: 1px solid #ccc
+      border-radius: 2px
+      color: #372f2b
+      display: block
+      min-width: 8px
+      padding: 0 5px 1px
+      text-align: center
+      text-decoration: none
+      &:hover
+        color: $link
+
