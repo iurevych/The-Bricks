@@ -1,0 +1,48 @@
+// --------------------------
+// Full-width metro-style pagination
+// --------------------------
+@import '../config'
+
+.metro-pagination
+  cursor: default
+  font-size: 16px
+  font-weight: bold
+  margin-bottom: $space-l
+  text-align: center
+  +clearfix
+
+  > li
+    display: inline-block
+    position: relative
+
+    // Different states
+    &.is-prev
+      float: left
+      a
+        background: image-url('metro-pagination/prev-arrow.png') 0 3px no-repeat
+        padding-left: 34px
+
+    &.is-next
+      float: right
+      a
+        background: image-url('metro-pagination/next-arrow.png') right 3px no-repeat
+        padding-right: 34px
+
+    &.is-active,
+    &.is-inactive
+      a, a:hover
+        color: inherit
+        cursor: default
+        text-decoration: none
+        +opacity(.2)
+
+    // Default link style
+    a
+      color: #372f2b
+      display: block
+      padding: 8px 10px
+      text-decoration: none
+      text-transform: uppercase
+      &:hover
+        +opacity(.2)
+
