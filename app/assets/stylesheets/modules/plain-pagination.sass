@@ -1,0 +1,35 @@
+// --------------------------
+// Plain text pagination without graphics
+// --------------------------
+@import '../config'
+
+.plain-pagination
+  cursor: default
+  font-size: 19px
+  font-weight: 500
+  margin-bottom: $space-l
+
+  // Large pagination style
+  &.is-large
+    font-size: 25px
+    font-weight: 200
+    > li
+      a
+        padding: 15px 35px 15px 0
+
+  > li
+    display: inline-block
+
+    &.is-active
+      a
+        color: $link
+
+    a
+      color: #372f2b
+      display: block
+      padding: 8px 20px 8px 0
+      text-decoration: none
+      text-transform: uppercase
+      &:hover
+        color: $link
+
