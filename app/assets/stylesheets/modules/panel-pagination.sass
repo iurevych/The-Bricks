@@ -46,6 +46,9 @@
     // Different states
     &.is-prev
       float: left
+      &.is-inactive
+        a:hover
+          background-position: 0 11px
       a
         background: image-url('panel-pagination/prev-arrow.png') 0 11px no-repeat
         margin-left: 12px
@@ -55,6 +58,9 @@
 
     &.is-next
       float: right
+      &.is-inactive
+        a:hover
+          background-position: right 11px
       a
         background: image-url('panel-pagination/next-arrow.png') right 11px no-repeat
         margin-right: 12px
@@ -66,16 +72,11 @@
       color: #fff
 
     &.is-inactive
-      &.is-prev a
-        background-position: 0 -19px
-
-      &.is-next a
-        background-position: right -19px
-
       a, a:hover
-        color: #c0c0c0
+        color: inherit
         cursor: default
         text-decoration: none
+        +opacity(.2)
 
     // Default link style
     a
