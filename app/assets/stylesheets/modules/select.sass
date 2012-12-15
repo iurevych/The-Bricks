@@ -1,0 +1,109 @@
+@import '../config'
+$top:      inset 0 1px 0 rgba(#000, .1)
+$gradient: inset 0 -20px 20px -10px rgba(#000, .05)
+$outer:    0 2px 3px rgba(#000, .2)
+$sh-initial: $top, $gradient, $outer
+
+.chzn-container
+  position: relative
+
+  &.opened
+    z-index: 999
+    .options
+      display: block
+
+  &.idle
+    .selected
+      color: #9da0ab
+
+  &.negative
+    &:hover
+      .selected
+        background-color: #400000
+    .selected
+      background-color: #4c0000
+      color: #ffe3e3
+      +box-shadow((inset 0 1px 0 rgba(#000, .2), 0 1px 0 rgba(#fff, .06)))
+
+// Selected item
+.chzn-single
+  background-color: #fff
+  border-radius: 5px
+  color: #372f2b
+  cursor: pointer
+  display: block
+  font-size: 15px
+  font-weight: 500
+  height: 38px
+  line-height: 19px
+  padding: 9px 13px
+  position: relative
+  text-decoration: none
+  z-index: 5
+  +box-sizing
+  +box-shadow($sh-initial)
+  &:hover
+    color: inherit
+
+  &.chzn-default
+    color: #999
+
+.chzn-drop-icon
+  background: image-url('select/icon-range.png') center no-repeat
+  height: 100%
+  position: absolute
+  right: 0
+  top: 0
+  width: 32px
+
+// Wrapper for more flexibility
+.chzn-drop
+  background-color: #fff
+  border-radius: 5px
+  padding: 47px 0 0
+  position: absolute
+  top: 0
+  width: 100%
+  z-index: 4
+  +box-shadow(0 0 1px rgba(#000, .25))
+
+.chzn-results
+  border-radius: 0 0 5px 5px
+  font: 500 15px/normal $base-font
+  max-height: 200px
+  overflow: auto
+  li
+    border-top: 1px solid rgba(#000, .04)
+    cursor: pointer
+    display: none
+    padding: 9px 13px 10px
+
+    &:last-child
+      border-radius: 0 0 5px 5px
+
+    &:hover,
+    &:focus,
+    &.highlighted
+      background-color: #f3f8fc
+
+    &.active-result
+      display: block
+
+// Select search
+.chzn-search
+  margin-bottom: 5px
+  padding: 1px 13px 3px
+  input
+    background-color: #fff
+    border: 1px solid rgba(#000, .12)
+    border-top-color: rgba(#000, .1)
+    border-radius: 5px
+    color: #404040
+    font: 500 15px/normal $base-font
+    height: 32px
+    line-height: 19px
+    padding: 5px 10px
+    width: 100%
+    +box-sizing
+    +box-shadow(0 -1px 0 rgba(#000, .17))
+
