@@ -1,0 +1,130 @@
+@import '../config'
+
+// jQuery Nivo Slider v3.1
+// http://nivo.dev7studios.com
+//
+// Copyright 2012, Dev7studios
+// Free to use and abuse under the MIT license.
+// http://www.opensource.org/licenses/mit-license.php
+// The Nivo Slider styles
+
+.nivo-slider-holder
+  // This should be your image height
+  height: 375px
+  position: relative
+
+.nivoSlider
+  height: auto
+  overflow: hidden
+  width: 100%
+  img
+    border-radius: 10px
+    left: 0
+    max-width: none
+    position: absolute
+    top: 0
+
+  // If an image is wrapped in a link
+  a.nivo-imageLink
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    border: 0
+    padding: 0
+    margin: 0
+    z-index: 6
+    display: none
+
+.nivo-main-image
+  display: block
+  position: relative
+  width: 100%
+
+// The slices and boxes in the Slider
+.nivo-slice
+  display: block
+  position: absolute
+  z-index: 5
+  height: 100%
+  top: 0
+
+.nivo-box
+  display: block
+  position: absolute
+  z-index: 5
+  overflow: hidden
+  img
+    display: block
+
+// Caption styles
+.nivo-caption
+  bottom: 50px
+  background: rgba(#000, .5)
+  border-radius: 3px
+  color: #fff
+  display: none
+  font: 500 27px/1.5 $base-font
+  left: 50px
+  overflow: hidden
+  padding: 5px 13px
+  position: absolute
+  text-shadow: 0 -1px 1px rgba(#000, .5)
+  width: 50%
+  z-index: 8
+  p
+    margin: 0
+    padding: 5px
+  a
+    display: inline
+
+.nivo-html-caption
+  display: none
+
+// Direction nav styles (e.g. Next & Prev)
+.nivo-prevNav
+  background: image-url('gallery/prev.png') 0 0 no-repeat
+  cursor: pointer
+  font-size: 1px
+  height: 79px
+  left: 0
+  margin-top: -40px
+  overflow: hidden
+  position: absolute
+  text-indent: -999em
+  top: 50%
+  width: 45px
+  z-index: 9
+
+.nivo-nextNav
+  @extend .nivo-prevNav
+  background-image: image-url('gallery/next.png')
+  left: auto
+  right: 0
+
+// Control nav styles (e.g. 1,2,3...)
+.nivo-controlNav
+  bottom: 20px
+  position: absolute
+  right: 20px
+  text-align: right
+  z-index: 10
+
+  .nivo-control
+    border: 2px solid #ababab
+    border-radius: 50%
+    cursor: pointer
+    display: inline-block
+    font-size: 1px
+    height: 5px
+    margin: 0 10px
+    overflow: hidden
+    text-indent: -999em
+    width: 5px
+    +transition(.2s)
+    &.active
+      background-color: #fff
+      border-color: #fff
+      +box-shadow(0 1px 0 rgba(#000, .2))
+

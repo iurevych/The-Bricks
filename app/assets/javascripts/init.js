@@ -11,4 +11,7 @@ $(function() {
     // Init commutator
     var commutator = new APP.Commutator(".commutator");
     commutator.init();
+
+    // Init gallery (nivoSlider)
+    $(".js-gallery").nivoSlider();
 });
