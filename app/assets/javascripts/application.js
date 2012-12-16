@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ./vendor/jquery-ui-1.8.18.custom.min
 //= require init
 //= require_tree ./vendor
 //= require_tree .
