@@ -1,0 +1,67 @@
+@import '../config'
+
+.commutator
+  border-radius: 20px
+  cursor: pointer
+  display: inline-block
+  font-weight: bold
+  height: 22px
+  overflow: hidden
+  position: relative
+  +box-shadow((1px 1px 0 rgba(#fff, .7), inset 1px 1px 1px rgba(#000, .3)))
+  +user-select(none)
+
+  // ------------------
+  // Colors
+  // ------------------
+  &.is-positive
+    &.is-on
+      background-color: $positive
+
+  &.is-negative
+    &.is-on
+      background-color: $negative
+
+  &.is-warning
+    &.is-on
+      background-color: #abae8f
+
+  // ------------------
+  // Commutator states
+  // ------------------
+  &.is-on
+    background-color: $firm
+    .commutator-slider
+      &.is-active
+        left: 0
+      &.is-inactive
+        margin-right: 24px
+
+  &.is-off
+    background-color: #372f2b
+    .commutator-slider
+      color: #888
+      &.is-active
+        left: -100%
+      &.is-inactive
+        margin-right: 2px
+
+  // ------------------
+  // On Off switchers
+  // ------------------
+  .commutator-slider
+    color: #fff
+    margin: 0 4px
+    padding: 2px 30px 2px 6px
+    position: relative
+    text-shadow: 1px 1px 0 rgba(#000, .2)
+    width: 100%
+    +box-sizing
+    +transition((left .2s linear, margin .2s linear))
+    &.is-inactive
+      background: image-url('commutator/slider.png') left 2px no-repeat
+      right: -100%
+      padding-left: 24px
+      position: absolute
+      top: 0
+

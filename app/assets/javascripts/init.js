@@ -7,4 +7,8 @@ $(function() {
     // Init datepicker
     var datepicker = new APP.Datepicker(".datepicker-block");
     datepicker.init();
+
+    // Init commutator
+    var commutator = new APP.Commutator(".commutator");
+    commutator.init();
 });
